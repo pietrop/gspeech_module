@@ -79,8 +79,8 @@ This will run the stt against the demo file, and you should see it in console.
 
 If no timecode, split at 30 sec, use that time to then split the words and generate timecodes with mats, similar to poporn js srt parser.  
 
-Ideally cut on silence. using ffmepg silence detect [like so]( 
-eg https://stackoverflow.com/questions/36074224/how-to-split-video-or-audio-by-silent-parts This could also be used to calculate )
+Ideally cut on silence. using ffmepg silence detect [like so eg]( 
+https://stackoverflow.com/questions/36074224/how-to-split-video-or-audio-by-silent-parts This could also be used to calculate )
 
 but if no silence after 90 sec, split before the 1 min.
 
