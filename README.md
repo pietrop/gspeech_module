@@ -17,6 +17,25 @@ in [google cloud](https://console.cloud.google.com)
 
 - rename as `keys.json` and put at root of projct. This is in `.gitignore` so no risk of accidentally commiting it to git/github.
 
+The json would look something like this 
+
+```json
+{
+  "type": "service_account",
+  "project_id": "",
+  "private_key_id": "",
+  "private_key": "",
+  "client_email": "",
+  "client_id": "",
+  "auth_uri": "",
+  "token_uri": "",
+  "auth_provider_x509_cert_url": "",
+  "client_x509_cert_url": ""
+}
+```
+
+But I am not sure which of these fields a side from the key are actually "really" needed, as in are being used to authenticate the requst. 
+
 ## Converting audio file to flac 
 
 ```
