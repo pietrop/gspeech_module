@@ -3,7 +3,7 @@ Testing google speech API.
 
 - [Audio duration limit](https://cloud.google.com/speech/limits)
 
-This repo for now uses the [@google-cloud/speech](https://www.npmjs.com/package/@google-cloud/speech) node module and test the synchronous request. As it's easist. 
+This repo for now uses the [@google-cloud/speech](https://www.npmjs.com/package/@google-cloud/speech) node module and test the synchronous request. As it's the most straightforward. But would like to try with streams and file longer then 1 min evenutally. 
 
 ## Getting google credentials JSON
 
