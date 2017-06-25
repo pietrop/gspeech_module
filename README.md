@@ -1,4 +1,4 @@
-# Google Speech API STT node module 
+# Google Speech API STT node module - work in progress
 Testing google speech API. 
 
 - [Audio duration limit](https://cloud.google.com/speech/limits)
@@ -6,21 +6,50 @@ Testing google speech API.
 This repo for now uses the [@google-cloud/speech](https://www.npmjs.com/package/@google-cloud/speech) node module and test the synchronous request. As it's easist. 
 
 ## Getting google credentials JSON
-in https://console.cloud.google.com/
 
-- API manager
+in [google cloud](https://console.cloud.google.com)
 
-- credential
+- `API manager`
 
-- create credentials -> service account keys -> json. 
+- `credential`
 
-rename as `keys.json` and put at root of projct. This is in `.gitignore` so no risk of accidentally commiting it to git/github.
+- `create credentials` -> `service account keys` -> `json`. 
+
+- rename as `keys.json` and put at root of projct. This is in `.gitignore` so no risk of accidentally commiting it to git/github.
 
 ## Converting audio file to flac 
 
 ```
 ffmpeg -i example.wav -c:a flac example.flac
 ```
+
+## Running repo
+
+Get the repo 
+
+```
+git clone git@github.com:pietrop/gspeech_module.git
+```
+
+Get into the folder
+
+```
+cd gspeech_module
+```
+
+Install dependencies
+
+``` 
+npm install
+```
+
+Try it out
+
+```
+npm start
+```
+
+This will run the stt against the demo file, and you should see it in console.
 
 
 ## TODO
@@ -41,17 +70,17 @@ ffmpeg -i example.wav -c:a flac example.flac
 	-[ ] and reconnect, similar to IBM
 
 ### Extra
--[ ] Add parameters 
+- [ ] Add hardcoded parameters to config
 
 
 ## Issues
-- [ ] no timecodes in response 
+- [ ] no timecodes in response, is there a way to get them from the API?
 - [ ] no word accurate timecodes in response 
 
 If no timecode, split at 30 sec, use that time to then split the words and generate timecodes with mats, similar to poporn js srt parser.  
 
-Ideally cut on silence. using ffmepg silence detect. 
-eg https://stackoverflow.com/questions/36074224/how-to-split-video-or-audio-by-silent-parts
+Ideally cut on silence. using ffmepg silence detect [like so]( 
+eg https://stackoverflow.com/questions/36074224/how-to-split-video-or-audio-by-silent-parts This could also be used to calculate )
 
 but if no silence after 90 sec, split before the 1 min.
 
