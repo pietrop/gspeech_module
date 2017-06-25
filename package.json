@@ -1,0 +1,15 @@
+{
+  "name": "test_gspeech",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "Pietro Passarelli <pietro.passarelli@gmail.com> (http://pietropassarelli.com)",
+  "license": "ISC",
+  "dependencies": {
+    "@google-cloud/speech": "^0.9.3"
+  }
+}

@@ -1,0 +1,1 @@
+//a module to convert google results into autoEdit JSON.
