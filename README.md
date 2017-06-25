@@ -64,10 +64,10 @@ This will run the stt against the demo file, and you should see it in console.
 - [ ] `convert_to_audio` module, to convert to `flac`.
 	- [ ] get google flac specs from documentation
 	- [ ] see how to convert using `fluent-ffmpeg` node wrapper. 
-- [ ] make `send_to_google_stt` module, look at IBM one in autoEdit for inspiration 
+- [ ] make `send_to_google_stt` module, [look at IBM one in autoEdit for inspiration](https://github.com/OpenNewsLabs/autoEdit_2/blob/master/lib/interactive_transcription_generator/transcriber/ibm_stt_node/send_to_watson.js) 
 - [ ] once this works, look into optimising
 	- [ ] adding split,(every 90 secs) 
-	- [ ] and reconnect, similar to IBM
+	- [ ] and reconnect, [similar to IBM module in autoEdit](https://github.com/OpenNewsLabs/autoEdit_2/tree/master/lib/interactive_transcription_generator/transcriber/ibm_stt_node)
 
 ### Extra
 - [ ] Add hardcoded parameters to config
