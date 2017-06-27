@@ -29,7 +29,8 @@ const languageCode = languageModel ;
 
 const request = {
   encoding: encoding,
-  sampleRateHertz: sampleRateHertz,
+  // TODO: sample_rate_hertz (16000) in RecognitionConfig must either be unspecified or match the value in the FLAC header (1600).
+  // sampleRateHertz: sampleRateHertz,
   languageCode: languageCode,
   verbose: false
 };
@@ -39,12 +40,13 @@ speech.recognize(filename, request)
   .then((results) => {
     const transcription = results[0];
 
-    if(cb){cb(results)}else{return results};
+    if(cb){cb(null,results)}else{return results};
     //TODO: add callback here 
     // console.log(`Transcription: ${transcription}`);
   })
   .catch((err) => {
-    console.error('ERROR:', err);
+    if(cb){cb(err,null)}else{return err};
+    // console.error('ERROR:', err);
   });
   
 //
