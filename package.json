@@ -1,0 +1,21 @@
+{
+  "name": "test_gspeech",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "test_audio":"jest google_stt/convert_to_audio.test.js",
+    "start": "node index.js"
+  },
+  "author": "Pietro Passarelli <pietro.passarelli@gmail.com> (http://pietropassarelli.com)",
+  "license": "ISC",
+  "dependencies": {
+    "@google-cloud/speech": "^0.9.3",
+    "file-base64": "^1.0.0",
+    "fluent-ffmpeg": "^2.1.2"
+  },
+  "devDependencies": {
+    "jest": "^20.0.4"
+  }
+}
