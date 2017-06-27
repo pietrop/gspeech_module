@@ -195,23 +195,23 @@ This will run the stt against the demo file, and you should see it in console.
 
 ## TODO to package as component to integrate in autoEdit
 
-- [ ] `convert_to_audio` module, to convert to `flac`.
-	- [ ] get google flac specs from documentation
-	- [ ] see how to convert using `fluent-ffmpeg` node wrapper. 
-- [ ] make `send_to_google_stt` module, [look at IBM one in autoEdit for inspiration](https://github.com/OpenNewsLabs/autoEdit_2/blob/master/lib/interactive_transcription_generator/transcriber/ibm_stt_node/send_to_watson.js) 
+- [x] `convert_to_audio` module, to convert to `flac`.
+	- [x] get google flac specs from documentation
+	- [x] see how to convert using `fluent-ffmpeg` node wrapper. 
+- [x] make `send_to_google_stt` module, [look at IBM one in autoEdit for inspiration](https://github.com/OpenNewsLabs/autoEdit_2/blob/master/lib/interactive_transcription_generator/transcriber/ibm_stt_node/send_to_watson.js) 
 - [ ] once this works, look into optimising
-	- [ ] adding split,(every 90 secs) 
+	- [x] adding split,(every 50 secs) 
 	- [ ] and reconnect, [similar to IBM module in autoEdit](https://github.com/OpenNewsLabs/autoEdit_2/tree/master/lib/interactive_transcription_generator/transcriber/ibm_stt_node)
 
 ### Extra
-- [ ] Add hardcoded parameters to config
+- [ ] move hardcoded parameters to config
 
 
 ## Issues
 - [ ] no timecodes in response, is there a way to get them from the API?
 - [ ] no word accurate timecodes in response 
 
-If no timecode, split at 30 sec, use that time to then split the words and generate timecodes with mats, similar to poporn js srt parser.  
+If no timecode, split at 50 sec, use that time to then split the words and generate timecodes with mats, similar to poporn js srt parser.  
 
 Ideally cut on silence. using ffmepg silence detect [like so eg]( 
 https://stackoverflow.com/questions/36074224/how-to-split-video-or-audio-by-silent-parts).
